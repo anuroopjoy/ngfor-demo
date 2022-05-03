@@ -1,0 +1,15 @@
+<table>
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let row of data; trackBy: trackByIndex">
+      <app-table-row [row]="row"></app-table-row>
+    </ng-container>
+  </tbody>
+</table>
+
+<button (click)="shuffleData()">Shuffle Data</button>
+<button (click)="addData()">Add Data</button>
