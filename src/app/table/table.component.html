@@ -5,9 +5,12 @@
     <th>Age</th>
   </thead>
   <tbody>
-    <ng-container *ngFor="let row of data; trackBy: trackByIndex">
-      <app-table-row [row]="row"></app-table-row>
-    </ng-container>
+    <tr
+      app-table-row
+      [row]="row"
+      *ngFor="let row of data; trackBy: trackById"
+    >
+    </tr>
   </tbody>
 </table>
 
