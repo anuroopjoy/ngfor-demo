@@ -8,9 +8,8 @@ describe('TableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableComponent ]
-    })
-    .compileComponents();
+      declarations: [TableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,14 @@ describe('TableComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('creation', () => {
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
+  });
+  describe('execution', () => {
+    it('should populate data', () => {
+      expect(component.data).toBeDefined();
+    });
   });
 });
