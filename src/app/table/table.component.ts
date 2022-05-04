@@ -15,19 +15,19 @@ export class TableComponent implements OnInit {
         firstName: 'John',
         lastName: 'Doe',
         age: 30,
-        id: 1,
+        id: 2,
       },
       {
         firstName: 'erwer',
         lastName: 'Dweroe',
         age: 31,
-        id: 2,
+        id: 3,
       },
       {
         firstName: 'srsrds',
         lastName: 'sdfdsfDoe',
         age: 32,
-        id: 3,
+        id: 1,
       },
       {
         firstName: 'sdf',
@@ -39,32 +39,9 @@ export class TableComponent implements OnInit {
   }
 
   shuffleData() {
-    this.data = [
-      {
-        firstName: 'erwer',
-        lastName: 'Dweroe',
-        age: 31,
-        id: 2,
-      },
-      {
-        firstName: 'srsrds',
-        lastName: 'sdfdsfDoe',
-        age: 32,
-        id: 3,
-      },
-      {
-        firstName: 'sdf',
-        lastName: 'sfdsf',
-        age: 34,
-        id: 4,
-      },
-      {
-        firstName: 'John',
-        lastName: 'Doe',
-        age: 30,
-        id: 1,
-      },
-    ];
+    this.data = JSON.parse(
+      JSON.stringify(this.data.sort((a, b) => b.age - a.age))
+    );
   }
 
   addData() {
